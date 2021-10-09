@@ -1,6 +1,7 @@
 # Copyright (C) 2013-2016 Freescale Semiconductor
 # Copyright 2017-2019 NXP
 # Released under the MIT license (see COPYING.MIT for the terms)
+# Modified by Daniel Selvan, Jasmin Infotech
 
 SUMMARY = "Linux Kernel provided and supported by NXP"
 DESCRIPTION = "Linux Kernel provided and supported by NXP with focus on \
@@ -12,10 +13,12 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=bbea815ee2795b2f4230826c0c6b8814"
 
 DEPENDS += "lzop-native bc-native"
 
-KERNEL_BRANCH ?= "5.4.24"
-LOCALVERSION = "-2.1.0"
+KERNEL_BRANCH ?= "5.4.47"
+LOCALVERSION = "-2.2.0"
 
-KERNEL_SRC ?= "git://github.com/WinSystems/linux-imx8m.git;protocol=https"
+# KERNEL_SRC ?= "git://github.com/WinSystems/linux-imx8m.git;protocol=https"
+# Temp kernel repository
+KERNEL_SRC ?= "git://github.com/bgnetworks/linux-imx8m.git;protocol=https"
 SRC_URI = "${KERNEL_SRC};branch=${KERNEL_BRANCH}"
 
 SRCREV = "${AUTOREV}"

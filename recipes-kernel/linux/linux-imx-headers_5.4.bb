@@ -1,5 +1,6 @@
 # Copyright 2017-2018 NXP
 # Released under the MIT license (see COPYING.MIT for the terms)
+# Modified by Daniel Selvan, Jasmin Infotech
 
 SUMMARY = "Installs i.MX-specific kernel headers"
 DESCRIPTION = "Installs i.MX-specific kernel headers to userspace. \
@@ -7,13 +8,12 @@ New headers are installed in ${includedir}/imx."
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=bbea815ee2795b2f4230826c0c6b8814"
 
-KERNEL_BRANCH ?= "imx_5.4.24_2.1.0"
-LOCALVERSION = "-2.1.0"
+KERNEL_BRANCH ?= "imx_5.4.47_2.2.0"
+LOCALVERSION = "-2.2.0"
 KERNEL_SRC ?= "git://source.codeaurora.org/external/imx/linux-imx.git;protocol=https"
 SRC_URI = "${KERNEL_SRC};branch=${KERNEL_BRANCH}"
 
-SRCREV = "dea2fede7e024ee7029b13e8d82a00ec14427777"
-
+SRCREV = "107f721b5ae079164a5d951ae93b7eac72388415"
 
 S = "${WORKDIR}/git"
 
